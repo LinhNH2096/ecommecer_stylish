@@ -21,7 +21,7 @@ class AppTextStyles {
   static final TextStyle bodyText1 = GoogleFonts.montserrat(
     fontSize: 14,
     fontWeight: FontWeight.w600,
-    color: AppColors.textSecondary,
+    color: AppColors.textSecondary
   );
 
   // BodyText2

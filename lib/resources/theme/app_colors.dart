@@ -6,4 +6,10 @@ class AppColors {
   static const Color background = Colors.white;
   static const Color textPrimary = Color(0xFF000000);
   static const Color textSecondary = Color(0xFF676767);
+
+  static const Color textFieldBorder = Color(0xFFA8A8A9);
+  static const Color textFieldBackground = Color(0xFFF3F3F3);
+  static const Color textFieldTint = Color(0xFF676767);
+
+  static const Color socialButtonBackground = Color(0xFFFCF3F6);
 }
