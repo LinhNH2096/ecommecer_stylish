@@ -1,4 +1,5 @@
 import 'package:ecommerce_stylish_flutter/resources/theme/app_colors.dart';
+import 'package:ecommerce_stylish_flutter/router/route_page.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,33 +25,34 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 20.h),
                 Text(
                   'Welcome\nBack!',
-                  style: TextStyle(
-                    fontSize: 32.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: GoogleFonts.montserrat(
+                      fontSize: 32.sp,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.textPrimary),
                 ),
-                SizedBox(height: 36.h),
+                SizedBox(height: 20.h),
                 const MainTextField(
                   hintText: 'Username or Email',
                   icon: AppImages.user,
                 ),
-                SizedBox(height: 31.h),
+                SizedBox(height: 20.h),
                 const MainTextField(
                     hintText: 'Password',
                     icon: AppImages.lock,
                     isPassword: true),
                 // Spacing before the button
                 Align(
-                  alignment: Alignment.centerRight, // Căn sang phải
+                  alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      // Logic khi nhấn vào "Forgot password?"
-                      print("Forgot password tapped");
+                      Navigator.of(context).pushNamed(
+                        FORGOT_PASSWORD_PATH,
+                      );
                     },
                     child: Text(
                       'Forgot password?',
                       style: TextStyle(
-                        color: AppColors.primary, // Đổi màu chữ thành màu đỏ
+                        color: AppColors.primary,
                         fontSize: 12.sp,
                       ),
                     ),
@@ -73,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                             children: [
                       Text('- OR Continue with -',
                           style: GoogleFonts.montserrat(
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
                             color: AppColors.textSecondary,
                           )),
@@ -96,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                           text: TextSpan(
                             text: 'Create An Account ',
                             style: GoogleFonts.montserrat(
-                              fontSize: 14,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w400,
                               color: AppColors.textSecondary,
                             ),
@@ -104,14 +106,16 @@ class LoginScreen extends StatelessWidget {
                               TextSpan(
                                 text: 'Sign Up',
                                 style: GoogleFonts.montserrat(
-                                    fontSize: 14,
+                                    fontSize: 14.sp,
                                     fontWeight: FontWeight.w600,
                                     decoration: TextDecoration.underline,
                                     color: AppColors.primary),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
                                     // Handle navigation to Sign Up screen
-                                    print('Navigate to Sign Up');
+                                    Navigator.of(context).pushNamed(
+                                      REGISTER_PATH,
+                                    );
                                   },
                               ),
                             ],

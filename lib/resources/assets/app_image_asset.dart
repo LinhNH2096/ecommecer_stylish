@@ -8,4 +8,5 @@ class AppImages {
   static const apple = '${assetsIcons}/apple.png';
   static const facebook = '${assetsIcons}/facebook.png';
   static const google = '${assetsIcons}/google.png';
+  static const mail = '${assetsIcons}/mail.png';
 }

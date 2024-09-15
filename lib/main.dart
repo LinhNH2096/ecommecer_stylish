@@ -1,4 +1,7 @@
+import 'package:ecommerce_stylish_flutter/router/router.dart';
+import 'package:ecommerce_stylish_flutter/ui/pages/auth/forgot_password_page.dart';
 import 'package:ecommerce_stylish_flutter/ui/pages/auth/login_page.dart';
+import 'package:ecommerce_stylish_flutter/ui/pages/auth/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_provider.dart';
@@ -32,6 +35,7 @@ class MyApp extends StatelessWidget {
               // You can use the library anywhere in the app even in theme
               theme: appProvider.currentTheme,
               home: child,
+              onGenerateRoute: AppRouter.generateRoute,
             );
           },
           child: LoginScreen(),
