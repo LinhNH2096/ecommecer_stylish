@@ -31,7 +31,7 @@ class SocialLoginButton extends StatelessWidget {
           child: Image.asset(
             iconPath,
             width: 26.w,
-            height: 26.h,
+            height: 26.w,
           ),
         ),
       ),

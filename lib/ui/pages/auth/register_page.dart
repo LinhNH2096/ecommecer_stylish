@@ -9,7 +9,7 @@ import '../custom_ui/main_text_field.dart';
 import '../custom_ui/social_login_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +78,7 @@ class RegisterScreen extends StatelessWidget {
                   onPressed: () {
                     // Handle login logic
                     print('Create Account pressed');
+                    Navigator.of(context).pop();
                   },
                 ),
                 SizedBox(height: 40.h),

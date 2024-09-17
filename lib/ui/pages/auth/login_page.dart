@@ -10,7 +10,7 @@ import '../custom_ui/main_text_field.dart';
 import '../custom_ui/social_login_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,6 +65,7 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {
                     // Handle login logic
                     print('Login pressed');
+                    Navigator.of(context).pushNamed(CHECKOUT_PATH);
                   },
                 ),
                 Expanded(

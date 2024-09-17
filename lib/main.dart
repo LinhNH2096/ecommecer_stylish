@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
               onGenerateRoute: AppRouter.generateRoute,
             );
           },
-          child: LoginScreen(),
+          child: LoginPage(),
         );
       },
     );

@@ -1,6 +1,7 @@
 import 'package:ecommerce_stylish_flutter/ui/pages/auth/forgot_password_page.dart';
 import 'package:ecommerce_stylish_flutter/ui/pages/auth/login_page.dart';
 import 'package:ecommerce_stylish_flutter/ui/pages/auth/register_page.dart';
+import 'package:ecommerce_stylish_flutter/ui/pages/home/checkout_page.dart';
 import 'package:flutter/material.dart';
 import 'route_page.dart';
 
@@ -13,22 +14,27 @@ class AppRouter {
     switch (settings.name) {
       case LOGIN_PATH:
         return MaterialPageRoute(
-          builder: (_) => LoginScreen(),
+          builder: (_) => LoginPage(),
           settings: settings,
         );
       case REGISTER_PATH:
         return MaterialPageRoute(
-          builder: (_) => RegisterScreen(),
+          builder: (_) => RegisterPage(),
           settings: settings,
         );
       case FORGOT_PASSWORD_PATH:
         return MaterialPageRoute(
-          builder: (_) => ForgotPasswordScreen(),
+          builder: (_) => ForgotPasswordPage(),
+          settings: settings,
+        );
+      case CHECKOUT_PATH:
+        return MaterialPageRoute(
+          builder: (_) => CheckoutPage(),
           settings: settings,
         );
       default:
         return MaterialPageRoute(
-          builder: (_) => LoginScreen(),
+          builder: (_) => LoginPage(),
           settings: settings,
         );
     }
